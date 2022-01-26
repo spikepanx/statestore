@@ -57,7 +57,7 @@ func main() {
 		MmapFlags:       0,
 		InitialMmapSize: 0,
 	}); err != nil {
-		glog.Fatalf("open DB failed", err, "my.db")
+		glog.Fatalf("open DB %s failed: %s", "my.db", err)
 	}
 	defer db.Close()
 
